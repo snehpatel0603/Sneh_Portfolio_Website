@@ -2005,3 +2005,54 @@ textarea.form-input::-webkit-resizer {
         max-width: 700px;
     }
 }
+/* Container for the timeline section */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  
+  /* Style for the download-cv section to align the button to the right */
+  .download-cv {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%; /* Ensure it's full width */
+    margin-bottom: 20px; /* Add some space below the download button */
+  }
+  
+  /* Style for the download button */
+  .download-btn {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;  /* Padding around text and icon */
+    background-color: #007BFF;  /* Button background color */
+    color: #fff;  /* Text color */
+    border-radius: 5px;  /* Rounded corners */
+    text-decoration: none;  /* Remove underline from the link */
+    transition: background-color 0.3s ease;  /* Smooth hover effect */
+  }
+  
+  /* Hover effect for the button */
+  .download-btn:hover {
+    background-color: #0056b3;  /* Darker blue on hover */
+  }
+  
+  /* Style for the download text */
+  .download-btn h3 {
+    margin-right: 10px;  /* Space between the text and icon */
+    font-size: 16px;  /* Adjust font size */
+  }
+  
+  /* Style for the ion-icon (download icon) */
+  .download-btn ion-icon {
+    font-size: 20px;  /* Adjust size of the icon */
+    color: #fff;  /* Ensure the icon is white */
+  }
+  
+  /* Optional: Adjust the icon size when hovered */
+  .download-btn:hover ion-icon {
+    transform: scale(1.1);  /* Slightly enlarge the icon on hover */
+    transition: transform 0.3s ease;  /* Smooth scaling effect */
+  }
+  
