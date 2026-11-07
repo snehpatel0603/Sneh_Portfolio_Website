@@ -814,6 +814,18 @@ main {
     margin-left: 45px;
 }
 
+/* Company names in Resume timeline */
+.timeline-list .company-name {
+    color: var(--orange-yellow-crayola);
+    font-weight: var(--fw-500);
+}
+
+/* Dates and locations in Resume timeline */
+.timeline-list .timeline-item > span:not(.company-name) {
+    color: #a8a8a8;
+}
+
+
 .timeline-item {
     position: relative;
 }
