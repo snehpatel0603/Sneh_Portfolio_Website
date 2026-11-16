@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" role="img" aria-labelledby="title">
+  <title id="title">Software and Database Development</title>
+  <g stroke="#F3C65A" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="7" y="10" width="45" height="37" rx="4"/>
+    <path d="M7 19H52"/>
+    <path d="M14 14.5H15M21 14.5H22"/>
+    <path d="M23 27L17 32L23 37"/>
+    <path d="M33 27L39 32L33 37"/>
+    <path d="M30 25L26.5 39"/>
+    <ellipse cx="48" cy="41" rx="10" ry="4" fill="#1f1f21"/>
+    <path d="M38 41V53C38 55.2 42.5 57 48 57S58 55.2 58 53V41" fill="#1f1f21"/>
+    <path d="M38 47C38 49.2 42.5 51 48 51S58 49.2 58 47"/>
+  </g>
+</svg>

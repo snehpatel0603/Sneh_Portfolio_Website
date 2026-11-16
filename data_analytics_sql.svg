@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" role="img" aria-labelledby="title">
+  <title id="title">Data Analytics and SQL</title>
+  <g stroke="#F3C65A" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="25" cy="14" rx="15" ry="6"/>
+    <path d="M10 14V40C10 43.4 16.7 46 25 46C27.5 46 29.8 45.8 31.7 45.3"/>
+    <path d="M40 14V24"/>
+    <path d="M10 26C10 29.4 16.7 32 25 32C27 32 29 31.8 30.8 31.4"/>
+    <circle cx="42" cy="39" r="10"/>
+    <path d="M49.3 46.3L57 54"/>
+  </g>
+</svg>

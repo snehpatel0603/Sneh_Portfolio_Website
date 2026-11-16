@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" role="img" aria-labelledby="title">
+  <title id="title">Business Intelligence</title>
+  <g stroke="#F3C65A" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M9 52H55"/>
+    <path d="M13 52V38H23V52"/>
+    <path d="M27 52V31H37V52"/>
+    <path d="M41 52V24H51V52"/>
+    <path d="M12 24L24 15L33 21L51 8"/>
+    <path d="M42 8H51V17"/>
+  </g>
+</svg>
