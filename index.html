@@ -65,6 +65,45 @@
 @media (min-width:580px) { .portfolio-project-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media (max-width:579px) { .portfolio-project-cover { height:165px; } .portfolio-project-content { min-height:0; } .case-dialog-top { padding:18px 17px; } .case-dialog-body { padding:20px 18px; } .case-dialog-top h3 { font-size:18px; } }
 @media (prefers-reduced-motion:reduce) { .portfolio-project-card,.portfolio-view ion-icon { transition:none; } }
+    
+/* CORM dashboard screenshot in project popup */
+
+.case-dashboard-preview {
+  margin: 24px 0 30px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #171719;
+  border: 1px solid #444;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+.case-dashboard-preview a {
+  display: block;
+  cursor: zoom-in;
+}
+
+.case-dashboard-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.case-dashboard-preview figcaption {
+  color: #bcbcbc;
+  font-size: 12px;
+  text-align: center;
+  padding: 12px;
+  background: #252528;
+}
+
+/* Make only the screenshot popup wider */
+
+.portfolio-case-dialog:has(.case-dashboard-preview) {
+  width: min(1080px, calc(100% - 28px));
+  max-height: 92vh;
+}
+
   </style>
 
   <!--
