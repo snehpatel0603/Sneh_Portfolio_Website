@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sneh Patel Portfolio</title>
+  <title>Sneh Patel | Data Analyst, BI & Full-Stack Projects</title>
 
   <!--
     - favicon
@@ -17,6 +17,55 @@
     - custom css link
   -->
   <link rel="stylesheet" href="style.css">
+  <style id="portfolio-project-styles">
+
+/* ===========================================
+   Portfolio project case studies (2026 update)
+   =========================================== */
+.portfolio-intro { color: var(--light-gray); line-height: 1.8; font-size: 14px; max-width: 740px; margin: 16px 0 28px; }
+.portfolio-project-grid { gap: 22px; }
+.portfolio-project-card { width: 100%; display: block; height: 100%; text-align: left; overflow: hidden; border-radius: 18px; border: 1px solid #39393d; background: linear-gradient(145deg,#29292d,#202023); transition: transform .22s ease,border-color .22s ease,box-shadow .22s ease; }
+.portfolio-project-card:hover,.portfolio-project-card:focus-visible { transform: translateY(-5px); border-color: #cfaa55; box-shadow: 0 14px 32px #0006; outline-offset: 3px; }
+.portfolio-project-cover { position: relative; height: 170px; overflow: hidden; display: flex; justify-content: center; align-items: center; isolation: isolate; border-bottom: 1px solid #ffffff14; background: radial-gradient(circle at 70% 24%,#e8bc4e24,transparent 38%),linear-gradient(135deg,#313037,#17171b); }
+.portfolio-project-cover::before { content:""; position:absolute; inset:0; background-image:linear-gradient(#ffffff09 1px,transparent 1px),linear-gradient(90deg,#ffffff09 1px,transparent 1px); background-size:24px 24px; mask-image:linear-gradient(to bottom,#0008,transparent); z-index:-1; }
+.portfolio-project-cover::after { content:""; position:absolute; width:220px; height:220px; border:1px solid #d7b35732; border-radius:50%; transform:rotate(-25deg) scaleY(.60); }
+.cover-main-icon { font-size: 78px; color: #f2c96d; filter: drop-shadow(0 8px 18px #ffc75b35); z-index:1; }
+.cover-mini { position:absolute; width:39px; height:39px; border:1px solid #e3c16e68; display:grid; place-items:center; background:#202024cc; color:#f2c96d; border-radius:10px; font-size:21px; z-index:2; box-shadow: 0 6px 18px #0007; }
+.cover-mini-a { top:29px; left:calc(50% - 114px); } .cover-mini-b { bottom:37px; right:calc(50% - 126px); }
+.cover-caption { position:absolute; bottom:12px; left:16px; font-size:10px; font-weight:600; letter-spacing:1.4px; color:#eac67c; }
+.cover-skytracker { background:radial-gradient(circle at 54% 45%,#c9a44420,transparent 43%),linear-gradient(135deg,#242c38,#17191f); }
+.cover-corm { background:radial-gradient(circle at 60% 45%,#d3a65a20,transparent 43%),linear-gradient(135deg,#27262a,#18181b); }
+.cover-msp { background:radial-gradient(circle at 55% 55%,#bb965820,transparent 43%),linear-gradient(135deg,#252b2e,#191b1e); }
+.cover-vulnerability { background:radial-gradient(circle at 50% 40%,#adbd9120,transparent 43%),linear-gradient(135deg,#252c29,#171a19); }
+.portfolio-project-content { display:flex; flex-direction:column; gap:10px; padding:20px; min-height:230px; }
+.portfolio-project-kind { font-size:11px; letter-spacing:.8px; text-transform:uppercase; color:#e5bc6e; font-weight:600; }
+.portfolio-project-title { color:#fafafa; font-size:18px; font-weight:600; line-height:1.35; }
+.portfolio-project-desc { color:#c9c9cc; font-size:13px; line-height:1.7; flex:1; }
+.portfolio-tech-tags,.case-tech { display:flex; flex-wrap:wrap; gap:7px; }
+.portfolio-tech-tags span,.case-tech span { display:inline-flex; align-items:center; padding:5px 9px; border:1px solid #bc98523c; border-radius:7px; background:#d3b26f10; color:#e4d7b7; font-size:11px; }
+.portfolio-view { display:flex; gap:8px; align-items:center; color:#f1c96e; font-size:12px; font-weight:600; margin-top:3px; }
+.portfolio-view ion-icon { font-size:15px; transition: transform .2s ease; } .portfolio-project-card:hover .portfolio-view ion-icon { transform:translateX(4px); }
+.portfolio-disclosure { margin-top:26px; padding:14px 16px; border-left:2px solid #b49153; border-radius:7px; background:#ffffff07; font-size:12px; line-height:1.7; color:#bcbcc0; }
+.portfolio-case-dialog { position:fixed; margin:auto; inset:0; width:min(690px,calc(100% - 28px)); max-height:min(88vh,850px); overflow:auto; border:1px solid #5a4b36; border-radius:18px; padding:0; background:#202023; color:#eaeaec; box-shadow:0 30px 110px #000c; }
+.portfolio-case-dialog::backdrop { background:#030305d9; backdrop-filter:blur(5px); }
+.case-dialog-top { position:sticky; top:0; z-index:2; display:flex; align-items:center; justify-content:space-between; gap:12px; padding:23px 26px; background:#27272b; border-bottom:1px solid #ffffff16; }
+.case-dialog-kicker { color:#edc16c; letter-spacing:1.5px; font-size:10px; font-weight:600; margin-bottom:6px; }
+.case-dialog-top h3 { color:#fff; font-weight:600; font-size:22px; line-height:1.3; }
+.case-dialog-close { display:grid; place-items:center; flex-shrink:0; width:36px; height:36px; background:#38383c; border:1px solid #ffffff20; border-radius:10px; font-size:23px; color:#eee; }
+.case-dialog-close:hover,.case-dialog-close:focus-visible { border-color:#e7bc68; color:#e7bc68; }
+.case-dialog-body { padding:24px 26px 28px; }
+.case-eyebrow { font-size:12px; color:#dfb762; font-weight:600; margin-bottom:10px; }
+.case-lead { color:#e8e8e8; font-size:14px; line-height:1.9; margin-bottom:20px; }
+.case-dialog-body h4 { font-size:15px; color:#fff; margin:20px 0 10px; font-weight:600; }
+.case-dialog-body ul { padding-left:19px; }
+.case-dialog-body li { display:list-item; list-style:disc; color:#c9c9cd; font-size:13px; line-height:1.8; margin:7px 0; }
+.case-notice { font-size:12px; line-height:1.8; color:#c4bcae; border-radius:10px; background:#d5b46c0c; border:1px solid #d5b46c34; padding:13px 15px; margin:23px 0 0; }
+.case-external-link { width:fit-content; display:inline-flex; gap:9px; align-items:center; margin-top:20px; color:#f5d48e; background:#b6914d15; border:1px solid #d7ad585e; border-radius:10px; padding:11px 14px; font-size:13px; font-weight:600; }
+.case-external-link:hover { background:#b6914d30; } .case-external-link ion-icon { font-size:17px; }
+@media (min-width:580px) { .portfolio-project-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width:579px) { .portfolio-project-cover { height:165px; } .portfolio-project-content { min-height:0; } .case-dialog-top { padding:18px 17px; } .case-dialog-body { padding:20px 18px; } .case-dialog-top h3 { font-size:18px; } }
+@media (prefers-reduced-motion:reduce) { .portfolio-project-card,.portfolio-view ion-icon { transition:none; } }
+  </style>
 
   <!--
     - google font link
@@ -656,265 +705,184 @@
       </article>
 
       <article class="projects" data-page="projects">
-
         <header>
-          <h2 class="h2 article-title">Projects</h2>
+          <h2 class="h2 article-title">Selected Projects</h2>
         </header>
 
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-          
-            <li class="filter-item">
-              <button data-filter-btn>Python</button>
-            </li>
-          
-            <li class="filter-item">
-              <button data-filter-btn>Data Visualization</button>
-            </li>
-          
-            <!-- <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li> -->
-          
-            <li class="filter-item">
-              <button data-filter-btn>Database</button>
-            </li>
-        
-        </ul>
-
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-select-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Database</button>
-              </li>
-              
-              <li class="select-item">
-                <button data-select-item>Python</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Data Visualization</button>
-              </li>
-
-              <!-- <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>  -->
-
-            </ul>
-
-          </div>
-
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="database">
-              <a href="https://github.com/devarshh/Coursera_DB_Engineering_Capstone">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="meta-db-eng-cert.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Meta Database Engineering Capstone</h3>
-
-                <p class="project-category">Database</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="python">
-              <a href="https://github.com/devarshh/CodeSignal">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="CodeSignal.png" alt="CodeSignal" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">CodeSignal solutions</h3>
-
-                <p class="project-category">Python</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="data visualization">
-              <a href="https://github.com/devarshh/drug_data_analysis">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="drug.jpeg" alt="drug_data_analysis" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Drug Data Analysis</h3>
-
-                <p class="project-category">Data Visualization</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="data visualization">
-              <a href="https://github.com/devarshh/Exploratory-data-analysis-capstone">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="crime.jpeg" alt="crime" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Exploratory Data Analysis on Crime</h3>
-
-                <p class="project-category">Data Visualization</p>
-
-              </a>
-            </li>
-
-
-            <li class="project-item  active" data-filter-item data-category="data visualization">
-              <a href="https://github.com/devarshh/Investment-Portfolio-Analysis">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="investment.png" alt="drug_data_analysis" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Investment Portfolio Analysis</h3>
-
-                <p class="project-category">Data Visualization</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="python">
-              <a href="https://github.com/devarshh/Catalog-Management-System">
-
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="CMS.png" alt="Catalog" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Catalog Management System</h3>
-
-                <p class="project-category">Python</p>
-
-              </a>
-            </li>
-            
-
-            <!-- <li class="project-item  active" data-filter-item data-category="database">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="project-6.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">MetaSpark</h3>
-
-                <p class="project-category">Database</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="project-7.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Summary</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="data visualization">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Task Manager</h3>
-
-                <p class="project-category">Data Visualization</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li> -->
-
+        <p class="portfolio-intro">A selection of full-stack development and business intelligence work, including professional case studies where the source systems and datasets cannot be shared publicly.</p>
+
+        <section class="projects" aria-label="Project gallery">
+          <ul class="filter-list" aria-label="Filter projects">
+            <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
+            <li class="filter-item"><button data-filter-btn>Full Stack</button></li>
+            <li class="filter-item"><button data-filter-btn>Power BI</button></li>
           </ul>
 
+          <div class="filter-select-box">
+            <button class="filter-select" data-select type="button">
+              <span class="select-value" data-select-value>All</span>
+              <span class="select-icon"><ion-icon name="chevron-down"></ion-icon></span>
+            </button>
+            <ul class="select-list">
+              <li class="select-item"><button data-select-item>All</button></li>
+              <li class="select-item"><button data-select-item>Full Stack</button></li>
+              <li class="select-item"><button data-select-item>Power BI</button></li>
+            </ul>
+          </div>
+
+          <ul class="project-list portfolio-project-grid">
+            <li class="project-item active" data-filter-item data-category="full stack">
+              <button class="portfolio-project-card" type="button" data-case-study="skytracker" aria-haspopup="dialog" aria-label="View SkyTracker project details">
+                <figure class="portfolio-project-cover cover-skytracker" aria-hidden="true">
+                  <span class="cover-orbit"></span>
+                  <ion-icon class="cover-main-icon" name="airplane-outline"></ion-icon>
+                  <span class="cover-mini cover-mini-a"><ion-icon name="globe-outline"></ion-icon></span>
+                  <span class="cover-mini cover-mini-b"><ion-icon name="analytics-outline"></ion-icon></span>
+                  <span class="cover-caption">FULL-STACK APPLICATION</span>
+                </figure>
+                <div class="portfolio-project-content">
+                  <p class="portfolio-project-kind">Personal / Full-stack project</p>
+                  <h3 class="portfolio-project-title">SkyTracker</h3>
+                  <p class="portfolio-project-desc">Airline flight management and analytics platform with secure user workflows, APIs, and real-time updates.</p>
+                  <div class="portfolio-tech-tags"><span>Vue 3</span><span>Node.js</span><span>MongoDB</span></div>
+                  <span class="portfolio-view">Explore case study <ion-icon name="arrow-forward-outline"></ion-icon></span>
+                </div>
+              </button>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="power bi">
+              <button class="portfolio-project-card" type="button" data-case-study="corm" aria-haspopup="dialog" aria-label="View CORM dashboard case study">
+                <figure class="portfolio-project-cover cover-corm" aria-hidden="true">
+                  <span class="cover-orbit"></span>
+                  <ion-icon class="cover-main-icon" name="grid-outline"></ion-icon>
+                  <span class="cover-mini cover-mini-a"><ion-icon name="layers-outline"></ion-icon></span>
+                  <span class="cover-mini cover-mini-b"><ion-icon name="funnel-outline"></ion-icon></span>
+                  <span class="cover-caption">ENTERPRISE REPORTING</span>
+                </figure>
+                <div class="portfolio-project-content">
+                  <p class="portfolio-project-kind">Professional / BI case study</p>
+                  <h3 class="portfolio-project-title">CORM Dashboard</h3>
+                  <p class="portfolio-project-desc">Enterprise Power BI reporting, navigation redesign, dynamic filters, and business-capability exploration.</p>
+                  <div class="portfolio-tech-tags"><span>Power BI</span><span>DAX</span><span>Data Modelling</span></div>
+                  <span class="portfolio-view">Explore case study <ion-icon name="arrow-forward-outline"></ion-icon></span>
+                </div>
+              </button>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="power bi">
+              <button class="portfolio-project-card" type="button" data-case-study="msp" aria-haspopup="dialog" aria-label="View MSP dashboard case study">
+                <figure class="portfolio-project-cover cover-msp" aria-hidden="true">
+                  <span class="cover-orbit"></span>
+                  <ion-icon class="cover-main-icon" name="bar-chart-outline"></ion-icon>
+                  <span class="cover-mini cover-mini-a"><ion-icon name="trending-up-outline"></ion-icon></span>
+                  <span class="cover-mini cover-mini-b"><ion-icon name="options-outline"></ion-icon></span>
+                  <span class="cover-caption">BUSINESS INTELLIGENCE</span>
+                </figure>
+                <div class="portfolio-project-content">
+                  <p class="portfolio-project-kind">Professional / BI case study</p>
+                  <h3 class="portfolio-project-title">MSP Reporting Dashboard</h3>
+                  <p class="portfolio-project-desc">Power BI reporting enhancements, validation, troubleshooting, and user-focused dashboard improvements.</p>
+                  <div class="portfolio-tech-tags"><span>Power BI</span><span>QA / UAT</span><span>Reporting</span></div>
+                  <span class="portfolio-view">Explore case study <ion-icon name="arrow-forward-outline"></ion-icon></span>
+                </div>
+              </button>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="power bi">
+              <button class="portfolio-project-card" type="button" data-case-study="vulnerability" aria-haspopup="dialog" aria-label="View vulnerability reporting case study">
+                <figure class="portfolio-project-cover cover-vulnerability" aria-hidden="true">
+                  <span class="cover-orbit"></span>
+                  <ion-icon class="cover-main-icon" name="shield-checkmark-outline"></ion-icon>
+                  <span class="cover-mini cover-mini-a"><ion-icon name="pulse-outline"></ion-icon></span>
+                  <span class="cover-mini cover-mini-b"><ion-icon name="checkmark-done-outline"></ion-icon></span>
+                  <span class="cover-caption">SECURITY REPORTING</span>
+                </figure>
+                <div class="portfolio-project-content">
+                  <p class="portfolio-project-kind">Professional / BI case study</p>
+                  <h3 class="portfolio-project-title">Vulnerability Reporting</h3>
+                  <p class="portfolio-project-desc">Dashboard quality, reporting usability, data validation, and accessibility improvements for security reporting.</p>
+                  <div class="portfolio-tech-tags"><span>Power BI</span><span>Data Quality</span><span>AODA</span></div>
+                  <span class="portfolio-view">Explore case study <ion-icon name="arrow-forward-outline"></ion-icon></span>
+                </div>
+              </button>
+            </li>
+          </ul>
+
+          <p class="portfolio-disclosure">Professional case studies are high-level descriptions of my contributions. No restricted datasets, internal screenshots, proprietary code, or confidential implementation details are published here.</p>
         </section>
 
+        <!-- Each template contains the body of its project popup. Edit these to add more detail. -->
+        <template id="case-skytracker">
+          <p class="case-eyebrow">Personal project · Full-stack development</p>
+          <p class="case-lead">SkyTracker is a full-stack airline flight management and analytics platform combining passenger workflows, reservation features, and interactive reporting.</p>
+          <h4>What I built</h4>
+          <ul>
+            <li>Developed web application features for flight search, booking workflows, and analytics.</li>
+            <li>Built backend REST APIs and data interactions using Node.js, Express, and MongoDB.</li>
+            <li>Implemented secure authentication and role-based access concepts using JWT.</li>
+            <li>Worked with real-time updates and interactive reporting features.</li>
+          </ul>
+          <h4>Technologies</h4>
+          <div class="case-tech"><span>Vue 3</span><span>Vite</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>Socket.IO</span><span>JWT</span><span>D3.js</span></div>
+          <div class="case-notice">The publicly accessible repository currently contains a project overview; the application requires additional local configuration and is not presented as a live demo.</div>
+          <a class="case-external-link" href="https://github.com/snehpatel0603/SkyTracker" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-github"></ion-icon> View GitHub repository <ion-icon name="open-outline"></ion-icon></a>
+        </template>
+
+        <template id="case-corm">
+          <p class="case-eyebrow">Professional case study · Government of Ontario · Power BI</p>
+          <p class="case-lead">Contributed to the enhancement of an enterprise Power BI reporting solution supporting portfolio analysis and business-capability reporting.</p>
+          <h4>My contributions</h4>
+          <ul>
+            <li>Redesigned reporting interactions, page navigation, and information presentation to improve usability.</li>
+            <li>Worked on dynamic filters, DAX measures, selection summaries, and consistent project counts across related visuals.</li>
+            <li>Explored hierarchical Level 1–3 business capability reporting using sample data and test relationships.</li>
+            <li>Validated report behavior, investigated inconsistencies, and supported accessibility improvements and QA/UAT.</li>
+          </ul>
+          <h4>Technologies & practices</h4>
+          <div class="case-tech"><span>Power BI</span><span>DAX</span><span>Power Query</span><span>Data Modelling</span><span>QA / UAT</span><span>AODA</span></div>
+          <div class="case-notice">This is a high-level professional case study. Internal dashboards, data, and source files are not available for public distribution. Experimental capability features are not represented as deployed production functionality.</div>
+        </template>
+
+        <template id="case-msp">
+          <p class="case-eyebrow">Professional case study · Government of Ontario · Power BI</p>
+          <p class="case-lead">Supported enterprise Power BI reporting enhancements with a focus on reliable information, practical usability, and stakeholder needs.</p>
+          <h4>My contributions</h4>
+          <ul>
+            <li>Reviewed report functionality and investigated data or visual inconsistencies.</li>
+            <li>Contributed to dashboard enhancements and reporting usability improvements.</li>
+            <li>Validated changes through quality assurance and user acceptance testing workflows.</li>
+            <li>Collaborated with technical and business stakeholders on reporting requirements.</li>
+          </ul>
+          <h4>Technologies & practices</h4>
+          <div class="case-tech"><span>Power BI</span><span>Data Validation</span><span>Reporting</span><span>QA / UAT</span><span>Stakeholder Collaboration</span></div>
+          <div class="case-notice">High-level summary only. The dashboard, its data sources, screenshots, and internal implementation details are not published.</div>
+        </template>
+
+        <template id="case-vulnerability">
+          <p class="case-eyebrow">Professional case study · Government of Ontario · Power BI</p>
+          <p class="case-lead">Supported improvements to an enterprise vulnerability reporting dashboard, emphasizing data accuracy, clear presentation, accessibility, and dependable report behavior.</p>
+          <h4>My contributions</h4>
+          <ul>
+            <li>Investigated dashboard reporting issues and assisted with visual and functional improvements.</li>
+            <li>Checked report accuracy, consistency, and filter or interaction behavior.</li>
+            <li>Supported accessibility and user-experience enhancements.</li>
+            <li>Performed validation and QA/UAT before reporting changes were released.</li>
+          </ul>
+          <h4>Technologies & practices</h4>
+          <div class="case-tech"><span>Power BI</span><span>Data Quality</span><span>QA / UAT</span><span>Accessibility</span><span>Reporting</span></div>
+          <div class="case-notice">High-level summary only. No vulnerability findings, internal security information, proprietary dashboards, screenshots, or datasets are displayed.</div>
+        </template>
+
+        <dialog id="portfolio-case-dialog" class="portfolio-case-dialog" aria-labelledby="portfolio-case-title">
+          <div class="case-dialog-top">
+            <div>
+              <p class="case-dialog-kicker">PROJECT CASE STUDY</p>
+              <h3 id="portfolio-case-title">Project details</h3>
+            </div>
+            <button type="button" class="case-dialog-close" data-case-close aria-label="Close project details"><ion-icon name="close-outline"></ion-icon></button>
+          </div>
+          <div id="portfolio-case-body" class="case-dialog-body"></div>
+        </dialog>
       </article>
 
 
@@ -1168,6 +1136,38 @@
     - custom js link
   -->
   <script src="script.js"></script>
+  <script id="portfolio-project-script">
+
+// Case study dialogs: works independently from the existing site navigation/filter script.
+(function () {
+  const dialog = document.getElementById('portfolio-case-dialog');
+  const dialogBody = document.getElementById('portfolio-case-body');
+  const dialogTitle = document.getElementById('portfolio-case-title');
+  if (!dialog || !dialogBody || !dialogTitle || !dialog.showModal) return;
+  let opener = null;
+
+  document.querySelectorAll('[data-case-study]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const id = button.getAttribute('data-case-study');
+      const template = document.getElementById('case-' + id);
+      if (!template) return;
+      opener = button;
+      dialogTitle.textContent = button.querySelector('.portfolio-project-title')?.textContent || 'Project details';
+      dialogBody.replaceChildren(template.content.cloneNode(true));
+      dialog.showModal();
+    });
+  });
+
+  dialog.querySelector('[data-case-close]')?.addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', (event) => {
+    const box = dialog.getBoundingClientRect();
+    if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) {
+      dialog.close();
+    }
+  });
+  dialog.addEventListener('close', () => opener?.focus());
+})();
+  </script>
 
   <!--
     - ionicon link
